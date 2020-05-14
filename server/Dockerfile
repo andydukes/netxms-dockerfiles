@@ -1,6 +1,6 @@
 # Dockerfile for building NetXMS server image
 
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Andy Dukes <andymdukes@icloud.com>
 
 ARG NETXMS_VERSION_SERVER=3.3.315
@@ -23,7 +23,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
     apt-get -qq clean
 
 RUN curl -sL http://packages.netxms.org/netxms.gpg | apt-key add - && \
-    echo "deb http://packages.netxms.org/debian/ stretch main" > /etc/apt/sources.list.d/netxms.list && \
+    echo "deb http://packages.netxms.org/debian/ buster main" > /etc/apt/sources.list.d/netxms.list && \
     apt-get update && \
     apt-get -y install libssl1.1 libzmq5 && \
     apt-get -y install netxms-server=$NETXMS_VERSION_SERVER netxms-dbdrv-sqlite3=$NETXMS_VERSION_SERVER && \
