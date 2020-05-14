@@ -37,7 +37,7 @@ services:
     command: ["/wait-for", "netxms-agent:4700", "--", "./docker-entrypoint.sh"]
 
   netxms-webui:
-    image: frostasm/netxms-webui:latest
+    image: andrewdukes/netxms-webui:latest
     restart: unless-stopped
     ports:
       - "8080:8080" # http://server:8080/nxmc/nxmc
