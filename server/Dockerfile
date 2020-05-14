@@ -1,9 +1,9 @@
 # Dockerfile for building NetXMS server image
 
 FROM debian:jessie
-MAINTAINER Serhii Moroz <frost.asm@gmail.com>
+MAINTAINER Andy Dukes <andymdukes@icloud.com>
 
-ARG NETXMS_VERSION_SERVER=2.2.12-1
+ARG NETXMS_VERSION_SERVER=3.3.314
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
     apt-get update && \
