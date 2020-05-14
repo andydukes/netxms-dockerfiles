@@ -1,9 +1,9 @@
 # Dockerfile for building NetXMS server image
 
-FROM debian:jessie
+FROM debian:buster
 MAINTAINER Serhii Moroz <frost.asm@gmail.com>
 
-ARG NETXMS_VERSION_AGENT=2.2.12-1
+ARG NETXMS_VERSION_AGENT=3.3.314
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
     apt-get update && \
@@ -12,9 +12,9 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
         apt-transport-https \
         libssh-4 && \
     curl -sL http://packages.netxms.org/netxms.gpg | apt-key add - && \
-    echo "deb http://packages.netxms.org/debian/ jessie main" > /etc/apt/sources.list.d/netxms.list && \
+    echo "deb http://packages.netxms.org/debian/ buster main" > /etc/apt/sources.list.d/netxms.list && \
     apt-get update && \
-    apt-get -y install netxms-agent=$NETXMS_VERSION_AGENT && \
+    apt-get -y install netxms-agent && \
     \
     apt-get -y install locales && \
     sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
