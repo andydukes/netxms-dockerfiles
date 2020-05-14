@@ -3,9 +3,9 @@
 FROM debian:jessie
 MAINTAINER Serhii Moroz <frost.asm@gmail.com>
 
-ENV MAJOR=2
-ENV MINOR=2
-ENV RELEASE=12
+ENV MAJOR=3
+ENV MINOR=3
+ENV RELEASE=314
 
 ENV VERSION=${MAJOR}.${MINOR}.${RELEASE}
 

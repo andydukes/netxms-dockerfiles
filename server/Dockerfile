@@ -3,7 +3,7 @@
 FROM debian:jessie
 MAINTAINER Andy Dukes <andymdukes@icloud.com>
 
-ARG NETXMS_VERSION_SERVER=3.3.314
+ARG NETXMS_VERSION_SERVER=3.3.315
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
     apt-get update && \
