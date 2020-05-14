@@ -1,6 +1,6 @@
 # Dockerfile for building NetXMS server image
 
-FROM debian:jessie
+FROM debian:buster
 MAINTAINER Andy Dukes <andymdukes@icloud.com>
 
 ARG NETXMS_VERSION_SERVER=3.3.315
