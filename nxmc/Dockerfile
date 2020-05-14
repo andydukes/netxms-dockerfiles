@@ -1,7 +1,7 @@
 # Dockerfile for building NetXMS Console
 
 FROM debian:buster
-MAINTAINER Andy Dukes <andymdukes@icloud.com>
+MAINTAINER Andrew Dukes <andymdukes@icloud.com>
 
 ENV MAJOR=3
 ENV MINOR=3
