@@ -10,7 +10,7 @@ services:
       GMAIL_PASSWORD: "PASSWORD"
 
   netxms-agent:
-    image: andrewdukes/netxms-nxagent:latest
+    image: andrewdukes/netxms-agent:latest
     restart: unless-stopped
     volumes:
       - ./netxms-data/agent:/data
