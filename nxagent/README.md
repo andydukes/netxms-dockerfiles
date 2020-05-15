@@ -4,7 +4,7 @@ Docker image of NetXMS agent.
 
 Start with
 
-	docker run frostasm/netxms-nxagent
+	docker run andrewdukes/netxms-nxagent
 
 Environment variables
 

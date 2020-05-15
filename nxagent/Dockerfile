@@ -3,13 +3,13 @@
 FROM debian:buster
 MAINTAINER Andrew Dukes <andymdukes@icloud.com>
 
-ARG NETXMS_VERSION_AGENT=3.3.314
+ARG NETXMS_VERSION_AGENT=3.3.315-1
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
     apt-get update && \
     apt-get -y install --no-install-recommends curl apt-transport-https libssh-4 gnupg2 && \
     curl -sL http://packages.netxms.org/netxms.gpg | apt-key add - && \
-    echo "deb http://packages.netxms.org/debian/ stretch main" > /etc/apt/sources.list.d/netxms.list && \
+    echo "deb http://packages.netxms.org/debian/ buster main" > /etc/apt/sources.list.d/netxms.list && \
     apt-get update && \
     apt-get -y install netxms-agent=$NETXMS_VERSION_AGENT && \
     \
