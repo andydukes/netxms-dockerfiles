@@ -1,4 +1,4 @@
-# Dockerfile for building NetXMS server image
+# Dockerfile for building NetXMS server image 3.8.267
 
 FROM debian:buster
 MAINTAINER Andrew Dukes <andymdukes@icloud.com>
